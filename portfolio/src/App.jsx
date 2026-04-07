@@ -38,7 +38,7 @@ const projects = [
     ],
     tech: ['JWT', 'Express.js', 'Stripe', 'MongoDB Atlas', 'Vercel', 'Render', 'CORS'],
     github: 'https://github.com/Rahuld2105/Vantage',
-    live: 'https://vantage-jj7w0gcsp-rahuld2105s-projects.vercel.app',
+    live: 'https://vantage-umber-nu.vercel.app/',
     featured: true,
   },
   {
@@ -65,7 +65,7 @@ const projects = [
       'Designed MongoDB schema with Mongoose ODM for structured recipe data storage and retrieval.',
     ],
     tech: ['MERN stack', 'Express.js', 'React.js', 'Hooks (useState, useEffect)', 'MongoDB', 'Mongoose ODM'],
-    github: 'https://github.com/Rahuld2105',
+    github: 'https://github.com/Rahuld2105/Recipe',
     live: 'https://newrb-frontend.onrender.com',
   },
   {

@@ -14,65 +14,75 @@ const navLinks = [
 ]
 
 const quickFacts = [
-  { label: 'Role Focus', value: 'Full Stack / SDE roles' },
-  { label: 'Experience', value: 'Frontend Intern at NEU AI Labs' },
-  { label: 'Education', value: 'Sinhgad College of Engineering' },
-  { label: 'Core Stack', value: 'React, Node.js, Express, MongoDB' },
+  {
+    label: 'Development Focus',
+    value: 'Building production-ready full stack applications with strong backend architecture',
+  },
+  { label: 'Target Roles', value: 'Full Stack Developer / Software Development Engineer (SDE)' },
+  { label: 'Experience', value: 'Frontend Developer Intern – NEU AI Labs' },
+  { label: 'Education', value: 'Sinhgad College of Engineering, Pune' },
+  { label: 'Core Stack', value: 'React.js • Node.js • Express.js • MongoDB' },
 ]
 
 const projects = [
   {
-    title: 'SkillConnect',
+    title: 'Vantage',
     subtitle: 'Featured Project',
     description:
-      'Developer collaboration platform focused on skill-based networking, project discovery, and team formation.',
+      'Built a full-stack web application with JWT-based authentication, role-based access control (admin/user), and protected dashboards.',
     highlights: [
-      'Built a post system for developers to share ideas, find collaborators, and connect around complementary skills.',
-      'Integrated video conferencing to support live discussions, interviews, and project planning sessions.',
+      'Developed RESTful APIs using Express.js for subscription management, user data, and application logic.',
+      'Integrated Stripe payment gateway for subscription-based billing with monthly and yearly plans.',
+      'Deployed frontend on Vercel and backend on Render with MongoDB Atlas; resolved production issues including CORS and API connectivity.',
+      'Built fully responsive UI compatible across all devices.',
     ],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'WebRTC'],
-    github: 'https://github.com/rahulhanmant/skillconnect',
-    live: 'https://skillconnect.app',
+    tech: ['JWT', 'Express.js', 'Stripe', 'MongoDB Atlas', 'Vercel', 'Render', 'CORS'],
+    github: 'https://github.com/Rahuld2105/Vantage',
+    live: 'https://vantage-jj7w0gcsp-rahuld2105s-projects.vercel.app',
     featured: true,
   },
   {
-    title: 'Vantage',
-    subtitle: 'Subscription Platform',
-    description:
-      'A MERN subscription platform with Stripe billing, JWT authentication, and dashboards for users and admins.',
-    highlights: [
-      'Handled authentication and protected routes using JWT-based flows.',
-      'Created dashboards to track subscriptions, user activity, and account status.',
-    ],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'JWT'],
-    github: 'https://github.com/rahulhanmant/vantage-dashboard',
-    live: 'https://vantage-dashboard.app',
-  },
-  {
     title: 'WanderLust',
-    subtitle: 'Travel Listing App',
+    subtitle: 'Travel Listing Platform',
     description:
-      'Travel listing application with CRUD features, location search, media handling, and map-based browsing.',
+      'Built a full-stack travel listing platform with complete CRUD, user authentication, and admin authorization using Passport.js and RBAC.',
     highlights: [
-      'Used Mapbox to display listing locations and improve the browsing experience.',
-      'Implemented authenticated listing creation, editing, and media management.',
+      'Followed MVC architecture for clean code separation; integrated Mapbox API for interactive, location-based property maps.',
+      'Integrated Cloudinary for cloud-based multi-image upload, storage, and optimization across property listings.',
+      'Designed MongoDB Atlas schema with Mongoose for listings, reviews, and users; deployed on Render.',
     ],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Mapbox', 'Cloudinary'],
-    github: 'https://github.com/rahulhanmant/wanderlust',
-    live: 'https://wanderlust-listings.app',
+    tech: ['Passport.js', 'RBAC', 'MVC', 'Mapbox API', 'Cloudinary', 'MongoDB Atlas', 'Mongoose', 'Render'],
+    github: 'https://github.com/Rahuld2105/WanderLust',
+    live: 'https://wanderlust-ukd3.onrender.com',
   },
   {
     title: 'Recipe App',
-    subtitle: 'MERN CRUD App',
+    subtitle: 'MERN Recipe Application',
     description:
-      'Responsive recipe management application with CRUD operations, search, and clean day-to-day usability.',
+      'Built a MERN stack application for recipe discovery with CRUD operations, category filtering, and search functionality.',
     highlights: [
-      'Built searchable recipe views so users can quickly filter and discover items.',
-      'Designed a simple responsive interface for creating, editing, and managing recipes.',
+      'Developed RESTful APIs in Express.js and built reusable React.js components with Hooks (useState, useEffect).',
+      'Designed MongoDB schema with Mongoose ODM for structured recipe data storage and retrieval.',
     ],
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
-    github: 'https://github.com/rahulhanmant/recipe-book',
-    live: 'https://recipeguard.vercel.app',
+    tech: ['MERN stack', 'Express.js', 'React.js', 'Hooks (useState, useEffect)', 'MongoDB', 'Mongoose ODM'],
+    github: 'https://github.com/Rahuld2105',
+    live: 'https://newrb-frontend.onrender.com',
+  },
+  {
+    title: 'SkillConnect',
+    subtitle: 'Developer Collaboration Platform',
+    description:
+      'Developed a full-stack web platform that connects users with complementary skills (e.g., frontend & backend) to collaborate and build real-world projects together.',
+    highlights: [
+      'Implemented user authentication and profile management to showcase individual skills and expertise.',
+      'Designed a skill-matching system to help users find suitable collaborators based on their tech stack.',
+      'Integrated real-time video calling feature to enable seamless communication and collaboration between users.',
+      'Built responsive and intuitive UI for smooth user experience across devices.',
+      'Developed RESTful APIs for handling user data, collaboration requests, and interactions.',
+    ],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'WebRTC', 'Socket.io', 'REST APIs'],
+    github: 'https://github.com/Rahuld2105/Campus-Connect',
+    live: 'https://skillconnect.app',
   },
 ]
 
@@ -141,15 +151,15 @@ function ArrowUpRightIcon() {
 
 function ProjectCard({ project }) {
   const cardClasses = project.featured
-    ? 'lg:col-span-2 border-white/10 bg-white/5 backdrop-blur-lg shadow-lg shadow-black/20'
-    : 'border-white/10 bg-white/5 backdrop-blur-lg shadow-lg shadow-black/10'
+    ? 'h-full lg:min-h-[34rem] border-white/10 bg-white/5 backdrop-blur-lg shadow-lg shadow-black/20'
+    : 'h-full lg:min-h-[34rem] border-white/10 bg-white/5 backdrop-blur-lg shadow-lg shadow-black/10'
 
   return (
     <MotionArticle
       variants={itemVariants}
       className={`group rounded-2xl border p-5 transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 sm:p-7 sm:hover:scale-[1.02] ${cardClasses}`}
     >
-      <div className="flex h-full flex-col gap-5">
+      <div className="flex h-full flex-col gap-5 lg:gap-4">
         <div className="flex items-start justify-between gap-4">
           <div className="space-y-2">
             <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400">
@@ -159,7 +169,7 @@ function ProjectCard({ project }) {
               <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">
                 {project.title}
               </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-400">{project.description}</p>
+              <p className="mt-2 max-w-2xl text-sm leading-7 text-slate-400">{project.description}</p>
             </div>
           </div>
           <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-slate-300 backdrop-blur-lg sm:flex">
@@ -167,7 +177,7 @@ function ProjectCard({ project }) {
           </div>
         </div>
 
-        <ul className="space-y-3 text-sm leading-7 text-slate-400">
+        <ul className="space-y-2.5 text-sm leading-7 text-slate-400">
           {project.highlights.map((highlight) => (
             <li key={highlight} className="flex gap-3">
               <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-500/80" />
@@ -253,29 +263,26 @@ export default function App() {
       <main className="relative z-10 mx-auto flex max-w-6xl flex-col gap-14 px-4 pb-14 pt-8 sm:gap-20 sm:px-8 sm:pb-16 sm:pt-14 lg:px-12">
         <MotionSection
           id="home"
-          className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start"
+          className="grid gap-8 lg:grid-cols-2 lg:items-stretch"
           variants={sectionVariants}
           initial="hidden"
           animate="visible"
         >
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/20 backdrop-blur-lg sm:p-10">
+          <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/20 backdrop-blur-lg sm:p-10">
             <p className="text-sm font-medium uppercase tracking-[0.3em] text-slate-400">
               Full Stack Developer (MERN)
             </p>
             <h1 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:mt-5 sm:text-5xl">
-              Hi, I&apos;m Rahul Dhadade 👋
+              Hi, I&apos;m Rahul Dhadade {"\u{1F44B}"}
             </h1>
-            <h2 className="mt-3 text-xl font-medium text-slate-200 sm:text-3xl">
-              Full Stack Developer (MERN)
-            </h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-slate-400 sm:mt-6 sm:text-lg sm:leading-8">
-              I build scalable web applications with authentication, payments, and real-time
-              features.
+              I build production-ready full stack applications with secure authentication, payment
+              integration, and real-time features.
             </p>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-400 sm:mt-6 sm:text-base">
-              I&apos;m a student developer focused on shipping practical MERN projects that feel
-              production-ready and clearly demonstrate problem solving, backend integration, and
-              thoughtful frontend work for campus placements.
+              I&apos;m a developer focused on solving real-world problems through scalable MERN
+              applications. My projects demonstrate strong backend architecture, clean API design,
+              and intuitive frontend experiences aligned with industry-level development practices.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap">
               <a
@@ -294,7 +301,7 @@ export default function App() {
           </div>
 
           <MotionAside
-            className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/10 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 sm:p-6"
+            className="h-full rounded-2xl border border-white/10 bg-white/5 p-5 shadow-lg shadow-black/10 backdrop-blur-lg transition-all duration-300 hover:shadow-xl hover:shadow-indigo-500/10 sm:p-6"
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
@@ -302,9 +309,9 @@ export default function App() {
           >
             <div className="space-y-1 border-b border-white/10 pb-5">
               <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
-                Placement Snapshot
+                Profile Snapshot
               </p>
-              <p className="text-lg font-semibold text-white">Focused on real project depth</p>
+              <p className="text-lg font-semibold text-white">Development profile at a glance</p>
             </div>
             <div className="mt-5 space-y-4">
               {quickFacts.map((fact) => (
@@ -334,7 +341,7 @@ export default function App() {
           />
 
           <MotionDiv
-            className="grid gap-5 lg:grid-cols-2"
+            className="grid gap-5 lg:auto-rows-fr lg:grid-cols-2"
             variants={listVariants}
             initial="hidden"
             whileInView="visible"
@@ -357,7 +364,6 @@ export default function App() {
           <SectionIntro
             eyebrow="Skills"
             title="A practical MERN-focused toolkit"
-            description="I&apos;ve kept the skills section simple and recruiter-friendly so the stack is easy to scan."
           />
 
           <MotionDiv
@@ -454,10 +460,10 @@ export default function App() {
 
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href="mailto:rahul.dhadade@gmail.com"
+                href="mailto:rahuldhadade.comp@gmail.com"
                 className="inline-flex w-full items-center justify-center break-all rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-indigo-500 hover:shadow-xl hover:shadow-indigo-500/20 sm:w-auto sm:hover:scale-[1.02]"
               >
-                rahul.dhadade@gmail.com
+                rahuldhadade.comp@gmail.com
               </a>
               <a
                 href="#projects"
